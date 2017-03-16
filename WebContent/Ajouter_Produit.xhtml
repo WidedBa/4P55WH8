@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<meta charset="UTF-8" />
+	<title>Ajouter Service</title>
+</h:head>
+
+<body>
+	<f:view>
+		
+		<h:form id="ajout">
+
+			<p:panel header="Ajouter Service" style="font-size:16px">
+				<h:panelGrid columns="2" cellpading="10">
+					
+
+					<p:outputLabel value="ID"></p:outputLabel>
+					<p:inputText value="#{mbservice.s.idService}" />
+
+					<p:outputLabel value="Libelle"></p:outputLabel>
+					<p:inputText value="#{mbservice.s.libelle}" />
+
+					<p:outputLabel value="Adr IP"></p:outputLabel>
+					<p:inputText value="#{mbservice.s.adrIp}" />
+
+					
+				</h:panelGrid>
+
+				
+				<div align="center">
+					<p:commandButton value="Ajouter articles"
+						action="#{mbservice.addService}" style="margin-top:10px;width:50%;" />
+				</div>
+
+			</p:panel>
+		</h:form>
+
+	</f:view>
+
+</body>
+</html>
